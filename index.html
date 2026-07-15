@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPlay - Plataforma de Jogos Educativos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="accessibility-bar">
+        <div class="logo">EduPlay 🎮</div>
+        <div class="controls">
+            <button onclick="changeFontSize('decrease')" aria-label="Diminuir texto">A-</button>
+            <button onclick="changeFontSize('increase')" aria-label="Aumentar texto">A+</button>
+            <button id="theme-toggle" onclick="toggleTheme()" aria-label="Alternar tema">Modo Escuro 🌙</button>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <button onclick="showSection('fundamental')">1º Ano Fundamental</button>
+        <button onclick="showSection('medio')">3º Ano Médio</button>
+        <button onclick="showSection('pais')">Painel dos Pais</button>
+        <button onclick="showSection('inclusao')">Espaço Inclusivo 🌟</button>
+        <button onclick="showSection('assinatura')">Planos</button>
+    </nav>
+
+    <main class="container">
+
+        <section id="fundamental" class="content-section active">
+            <h2>1º Ano do Ensino Fundamental</h2>
+            <p>Aprenda brincando com nossos minijogos!</p>
+            <div class="grid-subjects">
+                <div class="card" onclick="playGame('Matemática', 'Contar as Maçãs')">
+                    <h3>Matemática 🔢</h3>
+                    <p>Jogo: Contar Objetos</p>
+                    <button class="btn-play">Jogar</button>
+                </div>
+                <div class="card" onclick="playGame('Português', 'Formando Palavras')">
+                    <h3>Português 🅰️</h3>
+                    <p>Jogo: Complete a Palavra</p>
+                    <button class="btn-play">Jogar</button>
+                </div>
+                <div class="card" onclick="playGame('Educação Física', 'Movimento')">
+                    <h3>Educação Física 🏃‍♂️</h3>
+                    <p>Jogo: Siga o Ritmo</p>
+                    <button class="btn-play">Jogar</button>
+                </div>
+                <div class="card" onclick="playGame('Geografia', 'Mapas')">
+                    <h3>Geografia 🌍</h3>
+                    <p>Jogo: Onde eu moro?</p>
+                    <button class="btn-play">Jogar</button>
+                </div>
+                <div class="card" onclick="playGame('História', 'Tempo')">
+                    <h3>História ⏳</h3>
+                    <p>Jogo: Linha do Tempo</p>
+                    <button class="btn-play">Jogar</button>
+                </div>
+                <div class="card" onclick="playGame('Arte', 'Cores')">
+                    <h3>Arte 🎨</h3>
+                    <p>Jogo: Misturando Cores</p>
+                    <button class="btn-play">Jogar</button>
+                </div>
+                <div class="card" onclick="playGame('Inglês', 'Colors')">
+                    <h3>Inglês 🇬🇧</h3>
+                    <p>Jogo: Balões Coloridos</p>
+                    <button class="btn-play">Jogar</button>
+                </div>
+                <div class="card" onclick="playGame('Espanhol', 'Números')">
+                    <h3>Espanhol 🇪🇸</h3>
+                    <p>Jogo: Los Números</p>
+                    <button class="btn-play">Jogar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="medio" class="content-section">
+            <h2>3º Ano do Ensino Médio</h2>
+            <p>Prepare-se para os vestibulares e ENEM com desafios interativos.</p>
+            <div class="grid-subjects">
+                <div class="card"><h3>Português 📚</h3><p>Análise Sintática e Literatura</p></div>
+                <div class="card"><h3>Matemática 📐</h3><p>Análise Combinatória e Funções</p></div>
+                <div class="card"><h3>Arte 🖼️</h3><p>Vanguardas Europeias</p></div>
+                <div class="card"><h3>Geografia 🗺️</h3><p>Geopolítica Mundial</p></div>
+                <div class="card"><h3>História 🏛️</h3><p>História Contemporânea</p></div>
+                <div class="card"><h3>Educação Física ⚽</h3><p>Saúde e Qualidade de Vida</p></div>
+                <div class="card"><h3>Educação Financeira 💰</h3><p>Juros Compostos e Investimentos</p></div>
+                <div class="card"><h3>Física ⚡</h3><p>Eletromagnetismo</p></div>
+                <div class="card"><h3>Química 🧪</h3><p>Química Orgânica</p></div>
+                <div class="card"><h3>Biologia 🧬</h3><p>Genética e Biotecnologia</p></div>
+                <div class="card"><h3>Sociologia 👥</h3><p>Movimentos Sociais</p></div>
+                <div class="card"><h3>Filosofia 💭</h3><p>Ética e Cidadania</p></div>
+            </div>
+        </section>
+
+        <section id="pais" class="content-section">
+            <h2>Painel de Monitoramento dos Pais</h2>
+            <p>Acompanhe o progresso de seus filhos na plataforma em tempo real.</p>
+            <div class="parent-stats">
+                <div class="stat-card">
+                    <h3>Tempo de Tela</h3>
+                    <p class="stat-number">45 min</p>
+                    <p>Hoje</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Acertos nos Jogos</h3>
+                    <p class="stat-number" style="color: #2ecc71;">85%</p>
+                    <p>Média Geral</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Última Atividade</h3>
+                    <p>Jogo de Matemática (Contar Maçãs)</p>
+                    <p><em>Há 10 minutos</em></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="inclusao" class="content-section special-needs">
+            <h2>Espaço Estimulante e Inclusivo 🌟</h2>
+            <p>Atividades desenvolvidas com estímulos visuais suaves, fontes de alta legibilidade, sem limite de tempo e com reforço positivo para crianças com autismo e síndrome de Down.</p>
+            
+            <div class="grid-subjects">
+                <div class="card special-card" onclick="playGame('Estímulo', 'Encaixar Formas')">
+                    <h3>Formas e Cores 🟥</h3>
+                    <p>Interface simplificada sem poluição visual.</p>
+                    <button class="btn-play">Iniciar</button>
+                </div>
+                <div class="card special-card" onclick="playGame('Sons', 'Descobrir Instrumentos')">
+                    <h3>Sons da Natureza 🎵</h3>
+                    <p>Atividades com áudios suaves e calmos.</p>
+                    <button class="btn-play">Iniciar</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="assinatura" class="content-section">
+            <h2>Planos de Assinatura</h2>
+            <p>Tenha acesso ilimitado a todos os jogos e relatórios para os pais.</p>
+            <div class="pricing-container">
+                <div class="price-card">
+                    <h3>Plano Mensal</h3>
+                    <div class="price">R$ 59,99<span>/mês</span></div>
+                    <ul>
+                        <li>Todos os jogos incluídos</li>
+                        <li>Painel dos Pais completo</li>
+                        <li>Acesso em até 2 dispositivos</li>
+                    </ul>
+                    <button class="btn-pay-now">Assinar Agora</button>
+                </div>
+                <div class="price-card featured">
+                    <div class="badge">Melhor Valor</div>
+                    <h3>Plano Anual</h3>
+                    <div class="price">R$ 259,99<span>/ano</span></div>
+                    <ul>
+                        <li>Equivale a R$ 21,66 por mês</li>
+                        <li>Economia de mais de 60%</li>
+                        <li>Todos os benefícios do mensal</li>
+                    </ul>
+                    <button class="btn-pay-now">Assinar Agora</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="game-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modal-subject">Matéria</h2>
+            <p id="modal-game-title">Nome do Jogo</p>
+            <div class="game-area">
+                <p>🍎 + 🍎 = ?</p>
+                <div style="margin-top: 15px;">
+                    <button class="btn-play" onclick="alert('Parabéns! Resposta correta! 🎉')">2</button>
+                    <button class="btn-play" onclick="alert('Tente de novo com calma! Você consegue! 💪')">3</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
